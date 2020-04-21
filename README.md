@@ -1,4 +1,2 @@
 # getAJob
-#####2021秋招，fighting！
-
-######
+2021秋招，fighting！
