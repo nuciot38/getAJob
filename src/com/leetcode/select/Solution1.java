@@ -1,12 +1,9 @@
 package com.leetcode.select;
 
+/**
+ * LeetCode 33 搜索旋转排序数组
+ */
 public class Solution1 {
-    public static void main(String[] args) {
-        Solution1 solution1 = new Solution1();
-        int[] nums = {5, 1, 3};
-        int target = 5;
-        System.out.println(solution1.search(nums, target));
-    }
 
     public int search(int[] nums, int target) {
         int left = 0;
