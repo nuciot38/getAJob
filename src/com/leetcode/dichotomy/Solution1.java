@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 
+/**
+ * LeetCode 1095. 山脉数组中查找目标值
+ */
 public class Solution1 {
 
     public static void main(String[] args) {

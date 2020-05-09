@@ -1,5 +1,8 @@
 package com.leetcode.dichotomy;
 
+/**
+ * LeetCode 35 搜索插入位置
+ */
 public class Solution2 {
     public static void main(String[] args) {
         int[] nums = new int[]{1, 3, 5, 6};
