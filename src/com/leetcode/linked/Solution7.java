@@ -1,35 +1,37 @@
 package com.leetcode.linked;
 
+import java.util.List;
+
 /**
  * LeetCode 92 反转链表II
  */
 public class Solution7 {
-    public ListNode reverseBetween(ListNode head, int m, int n) {
-        ListNode start_node = new ListNode(0);
-        ListNode start = start_node;
-        ListNode end_node = new ListNode(0);
-        ListNode end = end_node;
-        ListNode listNode = null;
-        ListNode curr = head;
-        int flag = 1;
-        while (head != null) {
-            if (flag < m){
-                start.next = head;
-                start = start.next;
-            }else if (flag > n){
-                end.next = head;
-                end = end.next;
-            }else {
-                ListNode temp = head.next;
-                curr.next = listNode;
-                listNode = curr;
-                curr = temp;
-            }
-            head = head.next;
+    private boolean stop;
+    private ListNode left;
+
+    public void recurseAndReverse(ListNode right, int m, int n){
+        if (n == 1){
+            return;
         }
-        end.next = null;
-        listNode.next = end_node;
-        start.next = listNode;
-        return start.next;
+        right = right.next;
+        if (m > 1){
+            this.left = this.left.next;
+        }
+        this.recurseAndReverse(right, m-1, n-1);
+        if (this.left == right || this.left == right.next){
+            this.stop = true;
+        }
+        if (!this.stop){
+            int t = this.left.val;
+            this.left.val = right.val;
+            right.val = t;
+            this.left = this.left.next;
+        }
+    }
+    public ListNode reverseBetween(ListNode head, int m, int n) {
+        this.left = head;
+        this.stop = false;
+        this.recurseAndReverse(head, m, n);
+        return head;
     }
 }
