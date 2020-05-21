@@ -2,12 +2,15 @@ package com.leetcode.bitoperator;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * 面试题56-1 数组中数字出现的次数
  */
 public class Solution1 {
+    public static void main(String[] args) {
+        Solution1 solution1 = new Solution1();
+
+    }
     public int[] singleNumbers(int[] nums) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {

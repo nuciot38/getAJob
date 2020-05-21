@@ -14,4 +14,25 @@ public class Test {
         }
         int a = 0;
     }
+    //给链表赋值
+    public ListNode init(){
+        int[] nums = new int[]{1, 2, 3, 4, 5};
+        ListNode listNode = new ListNode(0);
+        ListNode node = listNode;
+        for (int i=0;i<nums.length;i++){
+            node.next = new ListNode(nums[i]);
+        }
+        return listNode;
+    }
+
+    //尾插法
+    public ListNode insert(ListNode root, ListNode node){
+        root.next = node;
+        return root;
+    }
+
+    //头插法
+//    public ListNode insertInHead(ListNode root, ListNode node){
+//
+//    }
 }
