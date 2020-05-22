@@ -2,10 +2,7 @@ package com.leetcode.bfs;
 
 import com.leetcode.stack.TreeNode;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * LeetCode 199 二叉树的右视图
