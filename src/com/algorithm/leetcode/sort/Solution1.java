@@ -3,7 +3,7 @@ package com.algorithm.leetcode.sort;
 import java.util.Arrays;
 
 /**
- * LeetCode 56 合并区间
+ * LeetCode 56 合并数组
  */
 public class Solution1 {
     public int[][] merge(int[][] intervals) {
